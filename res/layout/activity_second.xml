@@ -96,13 +96,13 @@
         android:layout_width="@dimen/grid"
         android:layout_height="@dimen/grid"
         android:text="("
-        android:id="@+id/decimal"
+        android:id="@+id/left_parenthesis"
         />
     <Button
         android:layout_width="@dimen/grid"
         android:layout_height="@dimen/grid"
         android:text=")"
-        android:id="@+id/zero"
+        android:id="@+id/right_parenthesis"
         />
 
 </GridLayout>

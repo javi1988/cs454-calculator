@@ -22,7 +22,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = getIntent();
         textField = (EditText) findViewById(R.id.textField);
         delete = (Button) findViewById(R.id.delete);
         seven = (Button) findViewById(R.id.seven);
@@ -230,6 +229,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
@@ -243,6 +243,10 @@ public class MainActivity extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }if(id == R.id.SecondActivity) {
+            Intent intent = new Intent(this, SecondActivity.class);
+            intent.putExtra("number", textField.getText().toString());
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
